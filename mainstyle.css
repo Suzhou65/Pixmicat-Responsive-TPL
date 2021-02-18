@@ -1,0 +1,83 @@
+/*這是提供給並提供給不想修改 inc_pixmicat.tpl 檔案的用戶進行替換升級的 mainstyle.css 檔案*/
+/*基本上所有框架定義都是原來 Pixmicat 預設的，僅有新增廣告欄位的 #AD 與提供討論串清單的 #topiclist 而已*/
+/*當裝置橫向解析度大於 720px，保持正常版型*/
+@media all{
+    html{background:#FFFFEF;color:#750000;font-family:sans-serif;font-size:100%;
+        background-image:url(http://helheim.info/bgi/BG00.png);
+        background-repeat:no-repeat;background-position:bottom right;background-attachment:fixed;}
+    /*基本網頁背景樣式，預設字體大小16px，背景圖案右下固定不重複，行動模式背景圖案不顯示*/
+    a{color:#05668D;text-decoration:none;font-family:sans-serif;} /*超連結樣式*/
+    small{font-size:0.8rem;} /*小字樣式*/
+	.admin_cap{color:#028090;} /*管理者名稱樣式*/
+	.nor{font-weight:normal;} /*TRIP 取消時粗體*/
+	.resquote{color:#00A896;} /*標註引用顏色*/
+    img{border:0;} /*圖片顯示樣式*/
+    hr{clear:left;} /*分隔線樣式*/
+    
+    #toplink{text-align:right;} /*頂部連結位置*/
+    h1{color:#800000;text-align:center;margin:0 auto;}/*版面標題樣式*/
+    #AD{margin:0px auto;} /*廣告欄位置中語法，廣告建議使用 Google AdSense 的 Responsive 模式*/
+    hr.top{width:90%;height:1px;} /*版面標題下方分隔線樣式*/
+    
+    .hide_btn{float:right;width:4em;height:1.25em;overflow:hidden;text-align:center;background:#F0E0D6;} /*隱藏投稿按鈕樣式*/
+    .Form_bg{background:#F0E6D6;} /*投稿左方說明欄位底色*/
+    .show{color:#05668D;}
+	.hide{display:none;}
+    #postinfo{font-size:0.8rem;} /*上傳說明樣式*/
+    
+    form{padding:0;margin:0;} /*討論串樣式，修正表單標籤造成的排版問題*/
+    #topiclist{margin:0px auto;} /*討論串清單樣式，安裝主題清單列表模組時使用*/
+	div.ListRow1_bg{background:#D6D6F7;} /*討論串清單欄位背景顏色，交互出現用*/
+	div.ListRow2_bg{background:#F6F6F6;} /*討論串清單欄位背景顏色，交互出現用*/
+    .category{font-size:0.8rem;color:#05668D;} /*討論串類別標籤顯示樣式*/
+    .threadpost{ } /*討論串首篇樣式*/
+	div.reply{display:table;margin:0.5ex 1em 0 1em;background:#F0E0D6;} /*討論串回應樣式*/
+	div.replywrap{display:table-cell;} /*解決 IE8+ 無法選取討論串回應內文用*/
+	div.reply_hl{background:#F6F6F6;} /*在討論串選取回應時，被選取之回應標亮*/
+    .img {float:left;margin:1ex 2ex;} /*討論串圖片顯示樣式*/
+	.title{color:#CC1105;font-size:1.125rem;font-weight:bold;} /*討論串標題樣式*/
+	.name{color:#028090;font-weight:bold;} /*文章投稿者名稱樣式*/
+	.quote{word-wrap:break-word;word-break:break-all;margin:1em 2em;} /*討論串內文縮排樣式*/    
+    .warn_txt2{color:#05668D;} /*討論串狀態提示文字樣式*/
+	.warn_txt{color:#CC1105;font-weight:bold;} /*討論串警告文字樣式*/
+	div.bar_reply{background:#CC1105;color:#F6F6F6;font-weight:bold;text-align:center;} /*討論串回應模式樣式標題列*/
+    div.pushpost{background:#FFFFEF;padding:13px;} /*推文欄位樣式*/
+
+    div#banner{background:#F6F6F6;} /*簡易操作欄位樣式*/
+	div.bar_admin{background:#CC1105;color:#F6F6F6;font-weight:bold;text-align:center;} /*管理模式樣式標題列*/
+	tr.ListRow1_bg{background:#D6D6F7;} /*管理模式欄位背景顏色，交互出現用*/
+	tr.ListRow2_bg{background:#F6F6F6;} /*管理模式欄位背景顏色，交互出現用*/
+
+    #footer{margin:0px auto;} /*底部欄位位置*/
+}
+/*當裝置橫向解析度低於 720px，切換為行動版，而行動版最低解析度為 320px*/
+@media only screen and (max-width:720px){
+    html{font-size:12px;padding:0px;background:#FFFFEF;color:#750000;font-family:sans-serif;min-width:320px;} /*行動網頁樣式，預設字體大小12px*/
+    a{font-size:0.917rem;color:#05668D;text-decoration:none;font-family:sans-serif;} /*超連結樣式*/
+    small{font-size:0.917rem;} /*小字樣式*/
+    hr{clear:both;max-width:98%;} /*分隔線樣式*/
+	img{border:0;} /*圖片顯示樣式*/
+    .resquote{font-size:0.917rem;color:#00A896;} /*標註引用顏色*/
+
+    #header{margin:0px auto;} /*頂部欄位定義*/
+    #toplink{text-align:right;position:fixed;background:#FFFFEF;} /*頂部連結鎖定*/
+    h1{font-size:1.250rem;color:#750000;text-align:center;margin:0 auto;} /*版面標題樣式*/
+    #AD{max-width:100%;margin:0px auto;} /*廣告欄位置中語法，廣告建議使用 Google AdSense 的 Responsive 模式*/
+    
+	.Form_bg{background:#F0E6D6;min-width:32px;} /*投稿左方說明欄位底色，與大小定義*/
+    form{max-width:100%;} /*投稿框架定義*/
+	input[type="text"]{max-width:90%;} /*投稿文字框定義*/
+    #fcom{max-width:200px;}  /*投稿文字框定義*/
+    #fupfile{display:block;} /*投稿檔案框定義*/
+    ul{padding-left:15px;} /*上傳說明樣式*/
+
+    #topiclist{display:none;} /*行動版 隱藏討論串清單，討論串清單樣式，安裝主題清單列表模組時使用*/
+	div.reply{clear:left;margin:0.5ex 0 0 0; max-width:97%;} /*討論串回應樣式*/
+	div.replywrap{clear:left;margin:0.5ex 0 0 0; max-width:97%;} /*解決 IE8+ 無法選取討論串回應內文用*/
+    .img{margin:5px;max-width:100%;height:auto;display:block;float:left;} /*討論串圖片顯示樣式*/
+	.quote{word-wrap:break-word;word-break:break-all;margin:2px 2px;} /*討論串內文縮排樣式*/  
+	div.pushpost{background:#FFFFEF;padding:13px;} /*推文定義*/
+    
+    #footer{display:none;} /*底部欄位隱藏*/
+    #page_switch{margin:0px auto;} /*底部頁碼切換*/
+    }
