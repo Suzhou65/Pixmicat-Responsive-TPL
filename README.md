@@ -19,13 +19,13 @@ Responsive template for Pixmicat! Imageboard System
 
 ## Template
 ### Pixmicat Default CSS Font and Div Definition
-![ScreenShot](https://github.takahashi65.info/lib_img/github_Pixmicat_Top.webp)
-![ScreenShot](https://github.takahashi65.info/lib_img/github_Pixmicat_Main.webp)
-![ScreenShot](https://github.takahashi65.info/lib_img/github_Pixmicat_Bottom.webp)
+![ScreenShot](https://github.takahashi65.info/lib_img/github_pixmicat_top.webp)
+![ScreenShot](https://github.takahashi65.info/lib_img/github_pixmicat_main.webp)
+![ScreenShot](https://github.takahashi65.info/lib_img/github_pixmicat_bottom.webp)
 
 ### Pixmicat Css Color Definition
-![ScreenShot](https://github.takahashi65.info/lib_img/github_Color_Design.webp)  
-![ScreenShot](https://github.takahashi65.info/lib_img/github_Pixmicat_Color_Change.webp)  
+![ScreenShot](https://github.takahashi65.info/lib_img/github_pixmicat_color_design.webp)  
+![ScreenShot](https://github.takahashi65.info/lib_img/github_pixmicat_color_change.webp)  
 
 ## Dependencies
 ### Pixmicat
