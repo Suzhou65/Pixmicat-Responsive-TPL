@@ -30,7 +30,7 @@
 	div.ListRow1_bg{background:#D6D6F7;} /*討論串清單欄位背景顏色，交互出現用*/
 	div.ListRow2_bg{background:#F6F6F6;} /*討論串清單欄位背景顏色，交互出現用*/
     .category{font-size:0.8rem;color:#05668D;} /*討論串類別標籤顯示樣式*/
-    .threadpost{ } /*討論串首篇樣式*/
+    /*.threadpost{ } 討論串首篇樣式 */
 	div.reply{display:table;margin:0.5ex 1em 0 1em;background:#F0E0D6;} /*討論串回應樣式*/
 	div.replywrap{display:table-cell;} /*解決 IE8+ 無法選取討論串回應內文用*/
 	div.reply_hl{background:#F6F6F6;} /*在討論串選取回應時，被選取之回應標亮*/
@@ -60,9 +60,8 @@
     .resquote{font-size:0.917rem;color:#00A896;} /*標註引用顏色*/
 
     #header{margin:0px auto;} /*頂部欄位定義*/
-    #toplink{text-align:right;position:fixed;background:#FFFFEF;} /*頂部連結鎖定*/
+    #toplink{display:none;} /* 隱藏頂部連結 */
     h1{font-size:1.250rem;color:#750000;text-align:center;margin:0 auto;} /*版面標題樣式*/
-    #AD{max-width:100%;margin:0px auto;} /*廣告欄位置中語法，廣告建議使用 Google AdSense 的 Responsive 模式*/
     
 	.Form_bg{background:#F0E6D6;min-width:32px;} /*投稿左方說明欄位底色，與大小定義*/
     form{max-width:100%;} /*投稿框架定義*/

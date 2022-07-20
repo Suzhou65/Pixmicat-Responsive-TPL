@@ -1,16 +1,28 @@
-<!--&THEMENAME-->Pixmicat_Responsive<!--/&THEMENAME--><!--&THEMEVER-->1500917<!--/&THEMEVER--><!--&THEMEAUTHOR-->Suzhou65<!--/&THEMEAUTHOR-->
+<!--&THEMENAME-->Pixmicat_Responsive<!--/&THEMENAME--><!--&THEMEVER-->1500918<!--/&THEMEVER--><!--&THEMEAUTHOR-->Suzhou65<!--/&THEMEAUTHOR-->
 <!--&HEADER--><!DOCTYPE html>
 <html lang="zh-TW"><head>
-<meta charset="utf-8">
-<meta name="robots" content="index, follow"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"/>
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+<!-- Jquery Host -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- META -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-tw">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta http-equiv="Cache-Control" content="max-age=600">
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
+<!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="256x256"/>
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="256x256"/>
+    <link rel=”mask-icon” type="image/svg" href="/favicon.svg" color="#FFFFFF">
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" sizes="180x180"/>
+<!-- Title -->
 <title>{$TITLE}</title>
-<script type="text/javascript" async src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+<!-- CSS Style -->
 <style type="text/css">
 /*將 mainstyle.css 導入 inc_pixmicat.tpl，讓轉譯速度加快*/
 /*當裝置橫向解析度大於 720px，保持正常版型*/
-/*基本上所有框架定義都是原來 Pixmicat 預設的，僅有新增廣告欄位的 #AD 與提供討論串清單的 #topiclist 而已*/
+/*基本上所有框架定義都是原來 Pixmicat 預設的，與提供討論串清單的 #topiclist 而已*/
+/*廣告建議使用 Google AdSense 的 Responsive 模式*/
 @media all{
     html{background:#FFFFEF;color:#750000;font-family:sans-serif;font-size:100%;
         background-image:url(http://helheim.info/bgi/BG00.png);
@@ -26,7 +38,7 @@
     
     #toplink{text-align:right;} /*頂部連結位置*/
     h1{color:#800000;text-align:center;margin:0 auto;}/*版面標題樣式*/
-    #AD{margin:0px auto;} /*廣告欄位置中語法，廣告建議使用 Google AdSense 的 Responsive 模式*/
+    
     hr.top{width:90%;height:1px;} /*版面標題下方分隔線樣式*/
     
     .hide_btn{float:right;width:4em;height:1.25em;overflow:hidden;text-align:center;background:#F0E0D6;} /*隱藏投稿按鈕樣式*/
@@ -40,12 +52,13 @@
 	div.ListRow1_bg{background:#D6D6F7;} /*討論串清單欄位背景顏色，交互出現用*/
 	div.ListRow2_bg{background:#F6F6F6;} /*討論串清單欄位背景顏色，交互出現用*/
     .category{font-size:0.8rem;color:#05668D;} /*討論串類別標籤顯示樣式*/
-    .threadpost{ } /*討論串首篇樣式*/
+    /* .threadpost{ } 討論串首篇樣式，如有需要再啟用 */
 	div.reply{display:table;margin:0.5ex 1em 0 1em;background:#F0E0D6;} /*討論串回應樣式*/
 	div.replywrap{display:table-cell;} /*解決 IE8+ 無法選取討論串回應內文用*/
 	div.reply_hl{background:#F6F6F6;} /*在討論串選取回應時，被選取之回應標亮*/
     .img {float:left;margin:1ex 2ex;} /*討論串圖片顯示樣式*/
 	.title{color:#CC1105;font-size:1.125rem;font-weight:bold;} /*討論串標題樣式*/
+    #admin_message{font-size:0.917rem; text-align:center;} /*標題列下方即時訊息*/
 	.name{color:#028090;font-weight:bold;} /*文章投稿者名稱樣式*/
 	.quote{word-wrap:break-word;word-break:break-all;margin:1em 2em;} /*討論串內文縮排樣式*/    
     .warn_txt2{color:#05668D;} /*討論串狀態提示文字樣式*/
@@ -58,7 +71,7 @@
 	tr.ListRow1_bg{background:#D6D6F7;} /*管理模式欄位背景顏色，交互出現用*/
 	tr.ListRow2_bg{background:#F6F6F6;} /*管理模式欄位背景顏色，交互出現用*/
 
-    #footer{margin:0px auto;} /*底部欄位位置*/
+    #footer{margin:auto; text-align:center;} /*底部欄位位置*/
 }
 /*當裝置橫向解析度低於 720px，切換為行動版，而行動版最低解析度為 320px*/
 @media only screen and (max-width:720px){
@@ -70,9 +83,8 @@
     .resquote{font-size:0.917rem;color:#00A896;} /*標註引用顏色*/
 
     #header{margin:0px auto;} /*頂部欄位定義*/
-    #toplink{text-align:right;position:fixed;background:#FFFFEF;} /*頂部連結鎖定*/
+    #toplink{display:none;} /*頂部連結隱藏*/
     h1{font-size:1.250rem;color:#750000;text-align:center;margin:0 auto;} /*版面標題樣式*/
-    #AD{max-width:100%;margin:0px auto;} /*廣告欄位置中語法，廣告建議使用 Google AdSense 的 Responsive 模式*/
     
 	.Form_bg{background:#F0E6D6;min-width:32px;} /*投稿左方說明欄位底色，與大小定義*/
     form{max-width:100%;} /*投稿框架定義*/
@@ -114,9 +126,9 @@ var ext="{$ALLOW_UPLOAD_EXT}".toUpperCase().split("|");
 <!--&TOPLINKS/-->
 <br>
 <h1>{$TITLE}</h1>
-<div id="AD" align="center">
-<!--頂部廣告程式碼插入位置-->
-</div>
+<div id="admin_message">
+    <!-- 標題列下方訊息欄位 -->
+</div><br>
 <hr/></div>
 <!--/&BODYHEAD-->
 <!--&POSTFORM-->
@@ -128,7 +140,7 @@ var ext="{$ALLOW_UPLOAD_EXT}".toUpperCase().split("|");
 <input type="hidden" name="upfile_path" value=""/>
 <!--&IF($RESTO,'{$RESTO}','')-->
 <div style="text-align: center;">
-<table id="postform_tbl" style="padding: 10px;border-spacing; 10px; margin: 0px auto; text-align: left;">
+<table id="postform_tbl" style="padding:10px; border-spacing:3px; margin:0px auto; text-align:left;">
 <tr><td class="Form_bg"><b>{$FORM_NAME_TEXT}</b></td><td>{$FORM_NAME_FIELD}</td></tr>
 <tr><td class="Form_bg"><b>{$FORM_EMAIL_TEXT}</b></td><td>{$FORM_EMAIL_FIELD}</td></tr>
 <tr><td class="Form_bg"><b>{$FORM_TOPIC_TEXT}</b></td><td>{$FORM_TOPIC_FIELD}{$FORM_SUBMIT}</td></tr>
@@ -158,13 +170,8 @@ var ext="{$ALLOW_UPLOAD_EXT}".toUpperCase().split("|");
 <!--&IF($FORMBOTTOM,'{$FORMBOTTOM}','')-->
 <!--/&POSTFORM-->
 <!--&FOOTER-->
-<div id="footer" align="center">
-<div id="AD" align="center">
-<!--底部廣告程式碼插入位置-->
-</div>
-<script type="text/javascript">preset();</script>
-<!--GoogleAnalytics 程式碼插入位置-->
-<br>
+<div id="footer">
+<script type="text/javascript">preset();</script><br>
 {$FOOTER}
 </div>
 </body>
@@ -173,8 +180,8 @@ var ext="{$ALLOW_UPLOAD_EXT}".toUpperCase().split("|");
 <!--&ERROR-->
 <div id="error">
 <div style="text-align: center; font-size: 1.125rem; font-weight: bold;">
-<span style="color:#CC1105;">{$MESG}</span><p />
-<a href="{$SELF2}">{$RETURN_TEXT}</a>　<a href="javascript:history.back();">{$BACK_TEXT}</a>
+<span style="color:#CC1105;">{$MESG}</span><br>
+<a href="{$SELF2}">{$RETURN_TEXT}</a> <a href="javascript:history.back();">{$BACK_TEXT}</a>
 </div>
 <hr/>
 </div>
