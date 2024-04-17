@@ -2,7 +2,7 @@
 [![css](https://github.takahashi65.info/lib_badge/css-3.0.svg)](https://www.w3.org/Style/CSS/)
 [![html](https://github.takahashi65.info/lib_badge/html-5.0.svg)](https://html.spec.whatwg.org/)
 [![no_maintenance](https://github.takahashi65.info/lib_badge/no_maintenance.svg)](https://github.com/potch/unmaintained.tech)
-[![Size](https://github-size-badge.herokuapp.com/Suzhou65/Pixmicat-Responsive-TPL.svg)](https://github.com/axetroy/github-size-badge)  
+[![Size](https://img.shields.io/github/repo-size/Suzhou65/Pixmicat-Responsive-TPL)](https://shields.io/category/size)
 
 Responsive template for Pixmicat! Imageboard System
 
